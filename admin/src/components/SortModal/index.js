@@ -102,7 +102,7 @@ const SortModal = () => {
   // Render the menu
   const showMenu = () => {
     const SortableItem = SortableElement(({ value }) => (
-      <MenuItem style={{ zIndex: 10, cursor: 'all-scroll' }} ><Icon height={"0.6rem"} as={Drag} />&nbsp;<span title={value[settings.title]}>{shortenString(value[settings.title])}</span><span>{value[settings.section]}</span></MenuItem>
+      <MenuItem style={{ zIndex: 10, cursor: 'all-scroll' }} ><Icon height={"0.6rem"} as={Drag} />&nbsp;<span title={value[settings.title]}>{shortenString(value[settings.title])}</span><span>---</span><span>{[settings.section]}</span></MenuItem>
     ));
 
     const SortableList = SortableContainer(({ items }) => {
