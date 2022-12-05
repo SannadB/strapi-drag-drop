@@ -133,6 +133,33 @@ const Settings = () => {
                       } />
                   </Box>
                 </GridItem>
+                <GridItem col={6} s={12}>
+                  <Box padding={0}>
+                    <TextInput
+                      placeholder="Section"
+                      label="Section Field Name"
+                      hint="You must create a Short Text Field with this label in the Content-Type Builder"
+                      name="content"
+                      onChange={e => {
+                        setSettings({
+                          ...settings,
+                          section: e.target.value,
+                        })
+                      }}
+                      value={settings.section}
+                      labelAction={
+                        <Tooltip description="Field that will show up in the drag drop menu">
+                          <button aria-label="Information about the email" style={{
+                            border: 'none',
+                            padding: 0,
+                            background: 'transparent'
+                          }}>
+                            <Information aria-hidden={true} />
+                          </button>
+                        </Tooltip>
+                      } />
+                  </Box>
+                </GridItem>
               </Grid>
             </Stack>
           </Box>
